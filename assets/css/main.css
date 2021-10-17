@@ -2244,11 +2244,14 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
+		background: url("images/overlay.png"), url("../../images/Cover\ Nadjem.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
+		font-size: 26px;
+		color: rgb(255, 255, 255);
+		text-shadow: 1px 3px 5px black;
 	}
 
 /* One */
@@ -2263,7 +2266,7 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
+		background: url("images/overlay.png"), url("../../images/second.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2310,3 +2313,74 @@ input, select, textarea {
 			}
 
 		}
+
+	/* learn skills */
+	@keyframes load{
+		from {
+		  width: 0%
+		}
+	  }
+	  @-webkit-keyframes load{
+		from {
+		  width: 0%
+		}
+	  }
+	  @-moz-keyframes load{
+		from {
+		  width: 0%
+		}
+	  }
+	  @-o-keyframes load{
+		from {
+		  width: 0%
+		}
+	  }
+	  
+	  .bar{
+		background-color: #EEE;
+		padding: 2px;
+		border-radius: 15px;
+		margin-bottom: 5px;
+		font-size: 14px;
+		color: rgb(0, 0, 0);
+		font-weight: bold;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	  }
+	  .bar::before{
+		content:  attr(data-skill);
+		background-color: #f3b0ff;
+		display: inline-block;
+		padding: 5px 0 5px 10px;
+		border-radius: inherit;
+		animation: load 2s 0s;
+		-webkit-animation: load 2s 0s;
+		-moz-animation: load 2s 0s;
+		-o-animation: load 2s 0s;
+	  }
+	  
+	  .bar.front::before{
+		background-color: #ffcc33;
+	  }
+	  .bar.back::before{
+		background-color: #a6cfe3;
+	  }
+	  
+	  .bar.learning::before{
+		width: calc(20% - 10px);
+	  }
+	  .bar.basic::before{
+		width: calc(40% - 10px);
+	  }
+	  .bar.intermediate::before{
+		width: calc(60% - 10px);
+	  }
+	  .bar.advanced::before{
+		width: calc(80% - 10px);
+	  }
+	  .bar.expert::before{
+		width: calc(100% - 10px);
+	  }
+#skills{
+	background-color: #39454b;
+	
+}
